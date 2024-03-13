@@ -13,6 +13,7 @@ jobs:
           build-mirror: ${{ secrets.BUILD_MIRROR }}
           branch: unstable
           bump-kernel: false
+          bump-pkgrel: true
           bump-modules: repo
           realtime: true
           gpg-key: ${{ secrets.GPG_KEY }}
