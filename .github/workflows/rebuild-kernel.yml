@@ -15,7 +15,6 @@ jobs:
           bump-kernel: false
           bump-pkgrel: true
           bump-modules: repo
-          realtime: true
           gpg-key: ${{ secrets.GPG_KEY }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
           boxit-host: ${{ secrets.BOXIT_HOST }}

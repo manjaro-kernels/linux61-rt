@@ -7,15 +7,13 @@ jobs:
   build-kernel:
     runs-on: ubuntu-20.04
     steps:
-      - name: Build Kernel Stable
-        uses: manjaro-kernels/kernel-action@master
+      - uses: manjaro-kernels/kernel-action@master
         with:
           gitlab-pw: ${{ secrets.gitlab_server_user }}
           build-mirror: ${{ secrets.BUILD_MIRROR }}
-          branch: stable
+          branch: "stable"
           bump-kernel: false
-          bump-modules: false
-          realtime: true
+          bump-modules: "none"
           gpg-key: ${{ secrets.GPG_KEY }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
           boxit-host: ${{ secrets.BOXIT_HOST }}
